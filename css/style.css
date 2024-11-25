@@ -1,0 +1,198 @@
+/* Reset dan dasar */
+* {
+  border: 0;
+  padding: 0;
+}
+
+.penguin-logo {
+  width: 200px;
+}
+
+.head-section {
+  background-color: rgba(255, 251, 240, 1);
+}
+
+h1 {
+  font-family: "Bebas Neue", cursive;
+}
+
+#text-style {
+  color: rgb(4, 4, 4);
+  font-size: 80px;
+}
+/* Animasi Slide-in */
+@keyframes slideIn {
+  0% {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.morphing-text {
+  display: inline-block;
+  animation: slideIn 1.5s ease-out forwards;
+}
+/* Animasi gambar muncul dari kanan */
+@keyframes slideFromRight {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.how-img img {
+  width: 100%;
+  border-radius: 10px;
+  animation: slideFromRight 2s ease-out forwards;
+}
+/* Animasi teks muncul dengan efek bounce dari bawah */
+@keyframes slideAndBounce {
+  0% {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.text-slide-up {
+  animation: slideAndBounce 1.5s ease-out forwards;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #333;
+  font-weight: 400;
+}
+
+.text-slide-up p {
+  font-size: 20px;
+  font-family: 'Arial', sans-serif;
+  text-align: justify;
+}
+
+.text-style2 {
+  font-size: 80px;
+}
+
+.penguin-catagory,
+.text-style2 {
+  color: rgb(9, 9, 9);
+}
+
+/* Kartu produk */
+@keyframes moveLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-20px);
+  }
+}
+.carousel-container {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.carousel-track {
+  display: flex;
+  gap: 10px;
+  animation: scrollLeft 15s linear infinite;
+}
+
+.carousel-track img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Animasi bergerak ke kiri */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+
+.penguin-card-img {
+  padding: 5%;
+  margin: 4% auto;
+  transition: box-shadow 0.3s ease;
+  animation: moveLeft 2s infinite alternate;
+}
+
+.penguin-card-img:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.penguin-card-border,
+.penguin-card-img {
+  border-radius: 1em;
+}
+
+.penguin-card-border {
+  background-color: white;
+  border: 0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.penguin-card-border:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.price-text-style {
+  color: rgb(0, 0, 0);
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.penguin-card-footer {
+  background-color: white;
+  border: 0;
+}
+
+.penguin-btn {
+  background-color: rgba(164, 188, 70, 1);
+  color: white;
+}
+
+/* Footer */
+.footer-section {
+  background-color: hsla(72, 47%, 51%, 0.486);
+  padding: 3% 1% 1% 1%;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+
+.footer-section:hover {
+  background-color: hsla(72, 47%, 41%, 0.6);
+}
+
+/* Interaksi tambahan */
+.penguin-info {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10%;
+}
+
+.penguin-navbar {
+  background-color: transparent;
+}
